@@ -1,0 +1,23 @@
+// ==UserScript==
+// @name         GCN Next Button
+// @version      1.0
+// @description  Clicks the next button automatically when available.
+// @author       jigglypuff314
+// @include      https://site.gcntraining.com/*
+// @run-at       document-idle
+// @grant        none
+// ==/UserScript==
+
+console.log("GCN Next Button");
+
+console.log("Checking whether next button is active...");
+var nextbutton = document.getElementsByClassName("next next-active");
+
+setInterval (function() {
+    console.log("Checking...");
+    nextbutton = document.getElementsByClassName("next next-active");
+    if(nextbutton.length == 1){
+        console.log("Clicking on the Next Button.");
+        document.getElementsByClassName("next next-active")[0].click();
+    }
+}, 10000);
