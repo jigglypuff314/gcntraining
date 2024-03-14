@@ -194,7 +194,7 @@ if (currentURL === "https://site.gcntraining.com/user-admin/dashboard.html") {
             element.appendChild(document.createElement('br'));
             element.appendChild(additionalText);
         }
-        if (element.textContent.includes("Intervention and Referal Services")) {
+        if (element.textContent.includes("Intervention and Referral Services")) {
             var additionalText = document.createElement('span');
             additionalText.style.fontStyle = 'italic';
             additionalText.style.color = 'darkblue';
