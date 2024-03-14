@@ -16,6 +16,16 @@ var currentURL = window.location.href;
 // Check if the current URL matches the specified one
 if (currentURL === "https://site.gcntraining.com/user-admin/dashboard.html") {
     console.log("dashboard");
+    var userstatus = document.querySelectorAll('.users-tut-status'); 
+    userstatus.forEach(function(element) {
+        if (element.textContent.includes("Required Tutorials")) {
+            var additionalText = document.createElement('span');
+            additionalText.style.fontStyle = 'italic';
+            additionalText.style.color = 'darkblue';
+            additionalText.textContent = 'gcn script last updated March 14, 2024';
+            element.appendChild(document.createElement('br'));
+            element.appendChild(additionalText);
+        }
     var elements = document.querySelectorAll('.tut-title'); 
     elements.forEach(function(element) {
         if (element.textContent.includes("Bloodborne Pathogens")) {
