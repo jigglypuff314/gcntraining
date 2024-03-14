@@ -16,7 +16,9 @@ var currentURL = window.location.href;
 // Check if the current URL matches the specified one
 if (currentURL === "https://site.gcntraining.com/user-admin/dashboard.html") {
     console.log("dashboard");
+    // Select the elements with class "tut-title" containing the text content
     var elements = document.querySelectorAll('.tut-title'); 
+
     // Loop through each element
     elements.forEach(function(element) {
         // Check if the text content of the element includes the term "ADAAA"
@@ -27,7 +29,8 @@ if (currentURL === "https://site.gcntraining.com/user-admin/dashboard.html") {
             additionalText.style.color = 'darkblue';
             additionalText.textContent = ' Due once every four years';
     
-            // Insert the span element with styled text
+            // Insert the line break and styled text
+            element.appendChild(document.createElement('br'));
             element.appendChild(additionalText);
         }
     });
