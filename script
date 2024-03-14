@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         GCN Next Button
-// @version      1.0
+// @version      2.0
 // @description  Clicks the next button automatically when available.
 // @author       jigglypuff314
 // @include      https://site.gcntraining.com/*
@@ -10,14 +10,38 @@
 
 console.log("GCN Next Button");
 
-console.log("Checking whether next button is active...");
-var nextbutton = document.getElementsByClassName("next next-active");
+// Get the current URL
+var currentURL = window.location.href;
 
-setInterval (function() {
-    console.log("Checking...");
-    nextbutton = document.getElementsByClassName("next next-active");
-    if(nextbutton.length == 1){
-        console.log("Clicking on the Next Button.");
-        document.getElementsByClassName("next next-active")[0].click();
-    }
-}, 10000);
+// Check if the current URL matches the specified one
+if (currentURL === "https://site.gcntraining.com/user-admin/dashboard.html") {
+    console.log("dashboard");
+    var elements = document.querySelectorAll('.tut-title'); 
+    // Loop through each element
+    elements.forEach(function(element) {
+        // Check if the text content of the element includes the term "ADAAA"
+        if (element.textContent.includes("ADAAA")) {
+            // Create a span element with italicized and dark blue style
+            var additionalText = document.createElement('span');
+            additionalText.style.fontStyle = 'italic';
+            additionalText.style.color = 'darkblue';
+            additionalText.textContent = ' Due once every four years';
+    
+            // Insert the span element with styled text
+            element.appendChild(additionalText);
+        }
+    });
+} else {
+    console.log("next");
+    console.log("Checking whether next button is active...");
+    var nextbutton = document.getElementsByClassName("next next-active");
+    
+    setInterval (function() {
+        console.log("Checking...");
+        nextbutton = document.getElementsByClassName("next next-active");
+        if(nextbutton.length == 1){
+            console.log("Clicking on the Next Button.");
+            document.getElementsByClassName("next next-active")[0].click();
+        }
+    }, 10000);
+}
