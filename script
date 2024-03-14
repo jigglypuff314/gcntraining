@@ -1,11 +1,12 @@
 // ==UserScript==
-// @name         GCN Next Button
+// @name         GCN Script
 // @version      2.0
-// @description  Clicks the next button automatically when available.
+// @description  Includes training frequency requirements (as of 3/14/2024) & Clicks the next button automatically when available
 // @author       jigglypuff314
 // @include      https://site.gcntraining.com/*
 // @run-at       document-idle
 // @grant        none
+// @downloadURL  
 // ==/UserScript==
 
 console.log("GCN Next Button");
