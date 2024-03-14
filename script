@@ -170,14 +170,6 @@ if (currentURL === "https://site.gcntraining.com/user-admin/dashboard.html") {
             element.appendChild(document.createElement('br'));
             element.appendChild(additionalText);
         }
-        if (element.textContent.includes("Paul's Law T.R.U.S.T. Training Webinar")) {
-            var additionalText = document.createElement('span');
-            additionalText.style.fontStyle = 'italic';
-            additionalText.style.color = 'darkblue';
-            additionalText.textContent = 'Annually For: [Everyone]';
-            element.appendChild(document.createElement('br'));
-            element.appendChild(additionalText);
-        }
         if (element.textContent.includes("Seizure SMART")) {
             var additionalText = document.createElement('span');
             additionalText.style.fontStyle = 'italic';
