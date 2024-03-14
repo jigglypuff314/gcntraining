@@ -6,7 +6,7 @@
 // @include      https://site.gcntraining.com/*
 // @run-at       document-idle
 // @grant        none
-// @downloadURL  
+// @downloadURL  https://github.com/jigglypuff314/gcntraining/blob/master/script
 // ==/UserScript==
 
 console.log("GCN Next Button");
