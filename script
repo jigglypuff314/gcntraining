@@ -50,14 +50,6 @@ if (currentURL === "https://site.gcntraining.com/user-admin/dashboard.html") {
             element.appendChild(document.createElement('br'));
             element.appendChild(additionalText);
         }
-        if (element.textContent.includes("Suicide Prevention Video")) {
-            var additionalText = document.createElement('span');
-            additionalText.style.fontStyle = 'italic';
-            additionalText.style.color = 'darkblue';
-            additionalText.textContent = 'Every 5 Years For: [Everyone]';
-            element.appendChild(document.createElement('br'));
-            element.appendChild(additionalText);
-        }
         if (element.textContent.includes("Anti-Bullying Bill of Rights")) {
             var additionalText = document.createElement('span');
             additionalText.style.fontStyle = 'italic';
