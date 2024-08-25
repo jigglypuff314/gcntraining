@@ -12,7 +12,7 @@
         "script.js"
       ]
     }
-  ]
+  ],
   "action": {
     "default_popup": "display.html",
     "default_icon": "gcn_logo.png"
