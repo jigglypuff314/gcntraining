@@ -1,5 +1,9 @@
-if (window.location.href.startsWith("https://site.gcntraining.com/")) {
-    console.log("GCN Next Button");
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+    if (message.scriptEnabled) {
+        // Place your JavaScript code here
+        console.log("Script is activated!");
+        // Example action: alert("Script is active!");
+        console.log("GCN Next Button");
     console.log("Checking whether next button is active...");
     var nextbutton = document.getElementsByClassName("next next-active");
     setInterval (function() {
@@ -10,4 +14,7 @@ if (window.location.href.startsWith("https://site.gcntraining.com/")) {
             document.getElementsByClassName("next next-active")[0].click();
         }
     }, 10000);
-}
+    } else {
+        console.log("Script is deactivated.");
+    }
+});
