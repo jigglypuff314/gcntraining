@@ -3,6 +3,16 @@
   "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
+  "content_scripts":[
+    {
+      "matches": [
+        "*://site.gcntraining.com/*"
+      ],
+      "js": [
+        "script.js"
+      ]
+    }
+  ]
   "action": {
     "default_popup": "display.html",
     "default_icon": "gcn_logo.png"
