@@ -1,12 +1,15 @@
-<html>
-  <head>
-    <title>GCN Next Clicker: Popup</title>
-    <link rel="stylesheet" href="popup.css" />
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <button id="enable" class="hide">Enable</button>
-    <button id="disable">Disable</button>
-    <span id="status" class="hide"></span>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCN Clicker</title>
+</head>
+<body>
+    <button id="toggleButton">Toggle Script</button>
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            chrome.runtime.sendMessage({ action: "toggleScript" });
+        });
+    </script>
+</body>
 </html>
