@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load the current state from storage
     chrome.storage.sync.get("isEnabled", (data) => {
-        toggleCheckbox.checked = data.isEnabled;
+        const isEnabled = data.isEnabled !== undefined ? data.isEnabled : true;
+        toggleCheckbox.checked = isEnabled;
     });
 
     toggleCheckbox.addEventListener('change', function() {
