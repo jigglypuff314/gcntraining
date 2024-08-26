@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('toggleButton');
+    const toggleCheckbox = document.getElementById('toggleCheckbox');
 
     // Load the current state from storage
     chrome.storage.sync.get("isEnabled", (data) => {
-        toggleButton.textContent = data.isEnabled ? "Disable Script" : "Enable Script";
+        toggleCheckbox.checked = data.isEnabled;
     });
 
-    toggleButton.addEventListener('click', function() {
+    toggleCheckbox.addEventListener('change', function() {
         chrome.runtime.sendMessage({ action: "toggleScript" }, (response) => {
-            toggleButton.textContent = response.isEnabled ? "Disable Script" : "Enable Script";
+            toggleCheckbox.checked = response.isEnabled;
         });
     });
 });
