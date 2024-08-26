@@ -1,6 +1,11 @@
 let isEnabled = false;
 
-chrome.action.onClicked.addListener((tab) => {
-    isEnabled = !isEnabled;
-    chrome.tabs.sendMessage(tab.id, { action: "toggleScript", isEnabled: isEnabled });
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === "toggleScript") {
+        isEnabled = !isEnabled;
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.tabs.sendMessage(tabs[0].id, { action: "toggleScript", isEnabled: isEnabled });
+        });
+        sendResponse({ isEnabled: isEnabled });
+    }
 });
