@@ -1,6 +1,10 @@
 chrome.runtime.onInstalled.addListener(() => {
-    // Set initial state to enabled by default
-    chrome.storage.sync.set({ isEnabled: true });
+    // Set initial state to enabled by default if it doesn't exist
+    chrome.storage.sync.get("isEnabled", (data) => {
+        if (data.isEnabled === undefined) {
+            chrome.storage.sync.set({ isEnabled: true });
+        }
+    });
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
