@@ -1,11 +1,15 @@
+chrome.storage.sync.get("isEnabled", (data) => {
+    if (data.isEnabled) {
+        startClicking();
+    }
+});
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "toggleScript") {
         let isEnabled = request.isEnabled;
         if (isEnabled) {
-            console.log("Enabling Next Button Clicker");
             startClicking();
         } else {
-            console.log("Disabling Next Button Clicker");
             stopClicking();
         }
     }
