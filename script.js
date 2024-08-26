@@ -1,13 +1,28 @@
-if (window.location.href.startsWith("https://site.gcntraining.com/")) {
-    console.log("GCN Next Button");
-    console.log("Checking whether next button is active...");
-    var nextbutton = document.getElementsByClassName("next next-active");
-    setInterval (function() {
-        console.log("Checking...");
-        nextbutton = document.getElementsByClassName("next next-active");
-        if(nextbutton.length == 1){
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === "toggleScript") {
+        let isEnabled = request.isEnabled;
+        if (isEnabled) {
+            console.log("Enabling Next Button Clicker");
+            startClicking();
+        } else {
+            console.log("Disabling Next Button Clicker");
+            stopClicking();
+        }
+    }
+});
+
+let intervalId;
+
+function startClicking() {
+    intervalId = setInterval(function() {
+        let nextButton = document.querySelector(".next.next-active");
+        if (nextButton) {
             console.log("Clicking on the Next Button.");
-            document.getElementsByClassName("next next-active")[0].click();
+            nextButton.click();
         }
     }, 10000);
+}
+
+function stopClicking() {
+    clearInterval(intervalId);
 }
