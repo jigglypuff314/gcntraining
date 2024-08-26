@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +7,6 @@
 </head>
 <body>
     <button id="toggleButton">Toggle Script</button>
-    <script>
-        document.getElementById('toggleButton').addEventListener('click', function() {
-            chrome.runtime.sendMessage({ action: "toggleScript" });
-        });
-    </script>
+    <script src="popup.js"></script>
 </body>
 </html>
