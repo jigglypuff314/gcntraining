@@ -1,13 +1,15 @@
-Step 1: Install TamperMonkey as a browser extension (available for both google chrome and firefox). 
+Step 1: Download the following files into a folder onto your computer...
+  manifest.json
+  background.js
+  script.js
+  popup.html
+  popup.js
+  gcn_logo.png
 
-Step 2: Click on the TamperMonkey extension and select "Create a New Script" in the drop down options.
+Step 2: Go to chrome://extensions
 
-Step 3: Delete the automatic fill of the "new script" that TamperMonkey creates. 
+Step 3: Enable Developer Mode by clicking the toggle switch next to Developer mode.
 
-Step 4: Go to https://github.com/jigglypuff314/gcntraining/blob/master/script.user.js and Copy-Paste the code into TamperMonkey.
+Step 4: Click the Load unpacked button and select the extension directory.
 
-Step 5: File > Save
-
-Step 6: Start your gcn training module. Make sure it is on the website https://site.gcntraining.com/
-
-What this script does: This script checks every ten seconds for the availability of the "Next Slide" button and clicks that button when it becomes available. This script DOES NOT answer any questions or interacts in any other way with anything else.
+Step 5: (optional) pin the extension

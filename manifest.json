@@ -1,11 +1,12 @@
 {
   "name": "GCN Next Clicker",
   "description": "Base Level Extension",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
@@ -21,7 +22,7 @@
     }
   ],
   "action": {
-    "default_popup": "display.html",
+    "default_popup": "popup.html",
     "default_icon": "gcn_logo.png"
   }
 }
