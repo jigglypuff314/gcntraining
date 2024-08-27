@@ -1,3 +1,10 @@
+New Steps:
+
+Extension is now officially on the google extension webstore: https://chromewebstore.google.com/detail/gcn-next-clicker/foohccickdagmnhjojebpccipanegeec?authuser=0&hl=en
+
+
+Old Steps:
+
 Step 1: Install TamperMonkey as a browser extension (available for both google chrome and firefox). 
 
 Step 2: Click on the TamperMonkey extension and select "Create a New Script" in the drop down options.
