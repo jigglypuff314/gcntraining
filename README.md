@@ -11,7 +11,7 @@ Step 2: Click on the TamperMonkey extension and select "Create a New Script" in 
 
 Step 3: Delete the automatic fill of the "new script" that TamperMonkey creates. 
 
-Step 4: Go to [https://github.com/jigglypuff314/gcntraining/blob/master/script.user.js](https://github.com/jigglypuff314/gcntraining/blob/master/original.js) and Copy-Paste the code into TamperMonkey.
+Step 4: Go to https://github.com/jigglypuff314/gcntraining/blob/master/original.js and Copy-Paste the code into TamperMonkey.
 
 Step 5: File > Save
 
