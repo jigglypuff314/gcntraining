@@ -3,8 +3,6 @@ New Steps:
 Extension is now officially on the google extension webstore: https://chromewebstore.google.com/detail/gcn-next-clicker/foohccickdagmnhjojebpccipanegeec?authuser=0&hl=en
 
 
-Old Steps:
-
 Step 1: Download the following files into a folder onto your computer...
   manifest.json
   background.js
