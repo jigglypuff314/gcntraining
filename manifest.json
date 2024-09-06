@@ -1,0 +1,27 @@
+{
+  "name": "GCN Next Clicker",
+  "description": "Base Level Extension",
+  "version": "1.1",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://site.gcntraining.com/*"
+      ],
+      "js": [
+        "script.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "gcn_logo.png"
+  }
+}
